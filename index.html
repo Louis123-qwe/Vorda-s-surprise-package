@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Vorda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #b30059;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #ffd6e7;
+      color: #5c0032;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      margin: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #f5b6d1;
+    }
+    .box {
+      background-color: #ffffffcc;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      border-radius: 12px;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      margin-top: 3rem;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday, Vorda</h1>  <div class="box">
+    <h2>Birthday Blessing</h2>
+    <p id="wish">Click the button below to receive a special birthday blessing.</p>
+    <button onclick="showWish()">Show Birthday Wish</button>
+  </div>  <div class="box">
+    <h2>Faith-Filled Quote</h2>
+    <p id="quote">Click the button below to reveal a spiritual birthday quote.</p>
+    <button onclick="showQuote()">Show Religious Quote</button>
+  </div>  <footer>
+    With love and prayers, from Louis
+  </footer>  <audio autoplay loop hidden>
+    <source src="https://cdn.pixabay.com/audio/2022/08/04/audio_b64d61c3ee.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  <script>
+    const wishes = [
+      "May your year be filled with divine favor and abundant joy.",
+      "Wishing you peace, health, and heavenly light on your birthday.",
+      "May God continue to bless your beautiful soul, Vorda.",
+      "Every moment of today be filled with grace and gratitude.",
+      "You are a gift to the world—may your day reflect that truth.",
+      "May angels surround you with love and protection this year.",
+      "Your light shines brighter each birthday—stay blessed.",
+      "May the Lord increase your wisdom and joy with each year.",
+      "Heaven rejoices over your life. Happy birthday!",
+      "Wishing you showers of blessings and joy.",
+      "May this birthday bring renewed strength and vision.",
+      "Your faith is a beacon—shine on this birthday and always.",
+      "You’re blessed and highly favored. Celebrate joyfully!",
+      "The Lord’s love surrounds you today and always.",
+      "You walk in grace—may this new year reflect it more.",
+      "May God's peace fill your heart today.",
+      "Rejoice! Today is a gift from heaven to you.",
+      "He who began a good work in you will carry it on.",
+      "Blessed is she who believes—happy birthday!",
+      "Today is evidence of God's faithfulness. Rejoice!",
+      "Your life is a divine masterpiece. Happy birthday!",
+      "A new year, new blessings, same faithful God.",
+      "Celebrate the beauty of who God made you to be.",
+      "May God open doors no man can shut this year.",
+      "The Lord’s purpose will stand—blessed birthday, Vorda."
+    ];
+
+    const quotes = [
+      "\"The Lord bless you and keep you; the Lord make his face shine on you.\" – Numbers 6:24-25",
+      "\"Delight yourself in the Lord, and He will give you the desires of your heart.\" – Psalm 37:4",
+      "\"God is within her, she will not fall.\" – Psalm 46:5",
+      "\"She is clothed with strength and dignity, and she laughs without fear of the future.\" – Proverbs 31:25",
+      "\"For I know the plans I have for you, declares the Lord.\" – Jeremiah 29:11",
+      "\"The Lord is my shepherd; I shall not want.\" – Psalm 23:1",
+      "\"I can do all things through Christ who strengthens me.\" – Philippians 4:13",
+      "\"Be strong and courageous. Do not be afraid.\" – Joshua 1:9",
+      "\"Let all you do be done in love.\" – 1 Corinthians 16:14",
+      "\"In all your ways submit to him, and he will make your paths straight.\" – Proverbs 3:6",
+      "\"Trust in the Lord with all your heart.\" – Proverbs 3:5",
+      "\"You are fearfully and wonderfully made.\" – Psalm 139:14",
+      "\"The joy of the Lord is your strength.\" – Nehemiah 8:10",
+      "\"The name of the Lord is a strong tower.\" – Proverbs 18:10",
+      "\"The Lord will fight for you; you need only to be still.\" – Exodus 14:14",
+      "\"He will cover you with his feathers.\" – Psalm 91:4",
+      "\"Those who hope in the Lord will renew their strength.\" – Isaiah 40:31",
+      "\"Let your light shine before others.\" – Matthew 5:16",
+      "\"The Lord is gracious and righteous.\" – Psalm 116:5",
+      "\"Surely your goodness and love will follow me.\" – Psalm 23:6",
+      "\"I have loved you with an everlasting love.\" – Jeremiah 31:3",
+      "\"Blessed are those who trust in the Lord.\" – Jeremiah 17:7",
+      "\"He gives strength to the weary.\" – Isaiah 40:29",
+      "\"My grace is sufficient for you.\" – 2 Corinthians 12:9",
+      "\"With God all things are possible.\" – Matthew 19:26"
+    ];
+
+    function showWish() {
+      const index = Math.floor(Math.random() * wishes.length);
+      document.getElementById("wish").textContent = wishes[index];
+    }
+
+    function showQuote() {
+      const index = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[index];
+    }
+  </script></body>
+</html>
