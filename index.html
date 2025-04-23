@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,20 +49,25 @@
   </style>
 </head>
 <body>
-  <h1>Happy Birthday, Vorda</h1>  <div class="box">
+  <h1>Happy Birthday, Vorda</h1>
+  <div class="box">
     <h2>Birthday Blessing</h2>
     <p id="wish">Click the button below to receive a special birthday blessing.</p>
-    <button onclick="showWish()">Show Birthday Wish</button>
-  </div>  <div class="box">
+    <button id="wishBtn">Show Birthday Wish</button>
+  </div>
+  <div class="box">
     <h2>Faith-Filled Quote</h2>
     <p id="quote">Click the button below to reveal a spiritual birthday quote.</p>
-    <button onclick="showQuote()">Show Religious Quote</button>
-  </div>  <footer>
+    <button id="quoteBtn">Show Religious Quote</button>
+  </div>
+  <footer>
     With love and prayers, from Louis
-  </footer>  <audio autoplay loop hidden>
+  </footer>
+  <audio autoplay loop hidden>
     <source src="https://cdn.pixabay.com/audio/2022/08/04/audio_b64d61c3ee.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-  </audio>  <script>
+  </audio>
+  <script>
     const wishes = [
       "May your year be filled with divine favor and abundant joy.",
       "Wishing you peace, health, and heavenly light on your birthday.",
@@ -88,7 +94,7 @@
       "Celebrate the beauty of who God made you to be.",
       "May God open doors no man can shut this year.",
       "The Lord’s purpose will stand—blessed birthday, Vorda.",
-      "Don't be a Lazy ass🤪".
+      "Don't be a Lazy ass🤪"
     ];
 
     const quotes = [
@@ -117,7 +123,7 @@
       "\"He gives strength to the weary.\" – Isaiah 40:29",
       "\"My grace is sufficient for you.\" – 2 Corinthians 12:9",
       "\"With God all things are possible.\" – Matthew 19:26",
-      "\"Blessed are the lazy ass, God will soon vindicate them.\" - LA 12:2".
+      "\"Blessed are the lazy ass, God will soon vindicate them.\" - LA 12:2"
     ];
 
     function showWish() {
@@ -129,5 +135,11 @@
       const index = Math.floor(Math.random() * quotes.length);
       document.getElementById("quote").textContent = quotes[index];
     }
-  </script></body>
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("wishBtn").addEventListener("click", showWish);
+      document.getElementById("quoteBtn").addEventListener("click", showQuote);
+    });
+  </script>
+</body>
 </html>
