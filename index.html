@@ -41,22 +41,19 @@
       max-width: 600px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       position: relative;
-    }
-    .quote-box {
       overflow: hidden;
     }
-    .bg-img {
+    .box img.bg-img {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.1; /* adjust fade level here */
       z-index: 0;
       border-radius: 12px;
     }
-    .quote-box > *:not(.bg-img) {
+    .box > *:not(.bg-img) {
       position: relative;
       z-index: 1;
     }
@@ -71,13 +68,14 @@
   <h1>Happy Birthday, Vorda</h1>
 
   <div class="box">
+    <img src="vorda.png" class="bg-img" alt="background" />
     <h2>Birthday Blessing</h2>
     <p id="wish">Click the button below to receive a special birthday blessing.</p>
     <button id="wishBtn">Show Birthday Wish</button>
   </div>
 
-  <div class="box quote-box">
-    <img src="vorda.png" class="bg-img" alt="background image" />
+  <div class="box">
+    <img src="LA.png" class="bg-img" alt="background" />
     <h2>Faith-Filled Quote</h2>
     <p id="quote">Click the button below to reveal a spiritual birthday quote.</p>
     <button id="quoteBtn">Show Religious Quote</button>
