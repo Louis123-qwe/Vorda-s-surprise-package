@@ -40,6 +40,25 @@
       border-radius: 12px;
       max-width: 600px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .quote-box {
+      overflow: hidden;
+    }
+    .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.1; /* adjust fade level here */
+      z-index: 0;
+      border-radius: 12px;
+    }
+    .quote-box > *:not(.bg-img) {
+      position: relative;
+      z-index: 1;
     }
     footer {
       margin-top: 3rem;
@@ -50,23 +69,29 @@
 </head>
 <body>
   <h1>Happy Birthday, Vorda</h1>
+
   <div class="box">
     <h2>Birthday Blessing</h2>
     <p id="wish">Click the button below to receive a special birthday blessing.</p>
     <button id="wishBtn">Show Birthday Wish</button>
   </div>
-  <div class="box">
+
+  <div class="box quote-box">
+    <img src="img.png" class="bg-img" alt="background image" />
     <h2>Faith-Filled Quote</h2>
     <p id="quote">Click the button below to reveal a spiritual birthday quote.</p>
     <button id="quoteBtn">Show Religious Quote</button>
   </div>
+
   <footer>
     With love and prayers, from Louis
   </footer>
+
   <audio autoplay loop hidden>
     <source src="https://cdn.pixabay.com/audio/2022/08/04/audio_b64d61c3ee.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
   <script>
     const wishes = [
       "May your year be filled with divine favor and abundant joy.",
@@ -142,4 +167,4 @@
     });
   </script>
 </body>
-</html>
+  </html>
